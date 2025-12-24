@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labs</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Лабораторна №1 — Основи HTML</h1>
+        <nav aria-label="Навігація">
+            <ul class="nav">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../labs.html">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Форма реєстрації</h2>
+        <p class="muted">
+            Дані відправляються на webhook.site для перевірки запиту.
+        </p>
+
+
+        <form action="https://webhook.site/ВАШ-UUID" method="POST" class="form">
+            <fieldset>
+                <legend>Особисті дані</legend>
+
+                <div class="field">
+                    <label for="firstName">Ім'я *</label>
+                    <input id="firstName" name="first_name" type="text" required />
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Прізвище *</label>
+                    <input id="lastName" name="last_name" type="text" required />
+                </div>
+
+                <div class="field">
+                    <label for="email">Email *</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Безпека</legend>
+
+                <div class="field">
+                    <label for="password">Пароль *</label>
+                    <input id="password" name="password" type="password" required minlength="6" />
+                </div>
+
+                <div class="field">
+                    <label for="password2">Підтвердження паролю *</label>
+                    <input id="password2" name="password_confirm" type="password" required minlength="6" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Додатково (за вибором)</legend>
+
+                <div class="field">
+                    <label for="birthdate">Дата народження</label>
+                    <input id="birthdate" name="birthdate" type="date" />
+                </div>
+
+                <div class="field">
+                    <label for="gender">Стать</label>
+                    <select id="gender" name="gender">
+                        <option value="">— оберіть —</option>
+                        <option value="female">Жіноча</option>
+                        <option value="male">Чоловіча</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit">Зареєструватися</button>
+        </form>
+
+        <p class="muted">
+            Поля з * — обов’язкові (required).
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <p><a href="../labs.html">← Назад до списку лабораторних</a></p>
+    </footer>
+</body>
+
+</html>
